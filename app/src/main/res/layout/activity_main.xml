@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/launcherHomeView"
+        >
+
+    <ImageView
+        android:id="@+id/remove_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/abc_ic_clear_mtrl_alpha"
+        android:tint="@android:color/holo_red_dark"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"></LinearLayout>
+    <LinearLayout
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        >
+
+    <EditText
+        android:id="@+id/search_app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:hint="Search App"
+        android:textColorHint="@color/abc_background_cache_hint_selector_material_dark"
+        android:focusable="true"
+
+        />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Black_Transparent"
+        android:padding="1dp"
+        >
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/appList"
+            android:numColumns="4"
+            ></GridView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/arrow_up_float"
+        android:layout_centerInParent="true"/>
+    <Button
+
+        android:id="@+id/menuButtonCollapse"
+        android:background="@android:drawable/arrow_down_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
